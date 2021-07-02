@@ -17,11 +17,7 @@ I am Electronics Engineer with experience of programming microcontrollers and su
 **Specialization:**  Design electrical equipment and power supply system of electrical equipment.  
 **Graduation paper:** Microcontroller-based motor controller for wire feed unit   
 
-<<<<<<< Updated upstream
-12.2020 - 06.2021	Course **“Interface development: layout and JavaScript”** run by Moscow Institute of Physics and Technology   
-=======
-12.2020 - 06.2021	Course **“Interface development: layout and JavaScript”** run by Moscow Institute of Physics and Technology    
->>>>>>> Stashed changes
+12.2020 - 06.2021	Course **“Interface development: layout and JavaScript”** run by Moscow Institute of Physics and Technology      
 07.2021 - present	Course **“JavaScript Front-end”** run by Rolling Scopes School
 
 ## KNOLEDGE
@@ -52,13 +48,8 @@ Experience of conducting technical and commercial negotiations, provide presenta
 **Position:** Electrical engineer, high voltage power supply group  
 **Main responsibilities:** Designing of medical X-ray equipment; preparation of technical documentation; writing of technical documentation. requirements specifications for mechanical design engineer and programming engineer.
 
-<<<<<<< Updated upstream
-06.2008 – 07.2011	**[“NPP FEB”, Ltd.](http://www.feb.spb.ru/)**   
-**Position:** Electrical engineer, research and development unit.
-=======
-06.2008 – 07.2011	**[“NPP FEB”, Ltd.](http://www.feb.spb.ru/)**
-**Position:** Electrical engineer, research and development unit.    
->>>>>>> Stashed changes
+06.2008 – 07.2011	**[“NPP FEB”, Ltd.](http://www.feb.spb.ru/)**      
+**Position:** Electrical engineer, research and development unit.   
 **Main responsibilities:**Programming microcontrollers by “C”; designing of welding equipment including MIG/MAG, TIG, MMA and wire feed; managing engineers; preparation of technical documentation.
 
 
