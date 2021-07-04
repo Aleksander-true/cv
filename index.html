@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
@@ -8,30 +8,35 @@
 	<title>Document</title>
 	<style>
 		body {
+			background-color: rgb(240, 240, 240);
+		}
+
+		.container,
+		.footer {
+			position: relative;
+
+			display: flex;
+			box-sizing: border-box;
+			width: 1012px;
+			margin-left: auto;
+			margin-right: auto;
+			
+			font-size: 0;
+			font-family: "MyriadProRegular", "Arial", sans-serif;
+			
 			background-color: grey;
 		}
 
-		.container {
-			width: 1012px;
-			display: flex;
-			position: relative;
-			margin-left: auto;
-			margin-right: auto;
-
-			font-size: 0;
-			font-family: "MyriadProRegular", "Arial", sans-serif;
-		}
-
 		.left-side {
+			position: relative;
+
 			box-sizing: border-box;
 			display: inline-block;
-			
-
 			width: 40%;
-			position: relative;
-			background-color: #ccc;
 
 			font-size: 20px;
+			
+			background-color: #ccc;
 		}
 
 		.photo {
@@ -47,6 +52,7 @@
 		.skills		{
 			margin-top: 40px;
 			margin-left: 40px;
+
 			font-size: 26px;
 			line-height: 23px;
 		}
@@ -63,14 +69,18 @@
 		.experience__work-place, 
 		.experience__work-description,
 		.english-skills__description,
-		.skills__item 	{
+		.skills__item,
+		.code-examples 	{
 			display: block;
 			margin: 20px;
-			font-size: 18px;
-			line-height: 24px;
 
+			font-size: 18px;
+			line-height: 24px
 		}
 
+		.profile__article {
+			margin-left: 0;
+		}
 		.experience__work-place, 
 		.experience__work-description {
 			margin-left: 0;
@@ -126,6 +136,7 @@
 			margin-top: 0;
 		}
 
+
 		.experience__container_flex,
 		.skills__container_flex {
 			display: flex;
@@ -153,6 +164,7 @@
 			display: inline-block;
 			width: 11px;
 			height: 11px;
+
 			border-radius: 50%;
 			background-color: orange;
 			border: 1px solid orange;
@@ -160,6 +172,29 @@
 
 		.skills__mark_empty {
 			background-color: rgb(218, 218, 218);
+		}
+
+
+		.footer__logo {
+			float: inline-start;
+			width: 200px;
+			margin: 20px;
+		}
+
+		.footer {
+			align-items: center;
+			justify-content: space-between;
+		}
+
+		.footer__github-link,
+		.footer__author {
+			font-size: 20px;
+		/*	color: white;*/
+			margin: 10px;
+		}
+		.footer__author {
+			font-size: 24px;
+			text-align: center;
 		}
 
 
@@ -177,17 +212,53 @@
 
 <body>
 	<div class="container">
-
+		<aside class="left-side">
+			<img class="photo" src="CVphoto_mirror.jpg" alt="photo">
+				<div class="contact"><h3>Contact</h3>
+					<ul> 
+						<li class="contact__phone">Phone: <a href="tel:+79215816965">+7(921)581-69-65</a></li>
+						<li class="contact__email">Email: <a href="mailto:al_seryapin@mail.ru">al_seryapin@mail.ru</a> </li>
+						<li class="contact__address">City: Saint-Petersburg</li>
+						</ul>
+				</div>
+				<div  class="education"><h3>Education</h3>
+					<ul>
+						<li class="education__item">2004-2009 </li>
+						<li class="education__item"><span class="education__item_bold">Ryazan State Radio Engineering
+							University, Russia</span></li>
+						<li class="education__item"><span class="education__item_bold">Specialization:</span> Design electrical
+							equipment and power supply system of
+							electrical equipment.</li>
+						<li class="education__item"><span class="education__item_bold">Graduation paper:</span>
+					Microcontroller-based motor controller for wire feed unit
+						</li>
+						<li class="education__item">12.2020 - 06.2021 </li>
+						<li class="education__item">Course <span class="education__item_bold">“Interface development: layout and
+					JavaScript”</span> run by Moscow Institute of Physics and Technology</li>
+						<li class="education__item">07.2021 - present </li>
+						<li class="education__item">Course <span class="education__item_bold">“JavaScript Front-end”</span> run
+					by Rolling Scopes School</li>
+					</ul>
+				</div>
+				<div class="english-skills"><h3>English skills</h3>
+					<ul>
+						<li class="english-skills__description"> <span class="english-skills__description_bold">Upper-Intermediate (B2)</span></li>
+						<li class="english-skills__description">Experience of conducting technical and commercial negotiations, 
+							provide presentations, oral translation for customers during tripartite meeting.</li>
+					</ul>
+				</div>
+				<article class="code-examples"><h3>Code examples</h3></article>
+		</aside>
 		<main class="right-side">
 			<article class="name">
 				<div class="name__name"><h1>Aleksandr Seryapin</h1></div>
 				<div class="name__position"><h2>JavaScript Front-End</h2></div>
 			</article>
 			<article class="profile"><h3>Profile</h3>
-				<p class="profile__article">I am Electronics Engineer with experience of programming microcontrollers
+				<div class="profile__article">I am Electronics Engineer with experience of programming microcontrollers
 					and supporting sales web sites. Now I am working at changing my specialization to JavaScript Full
 					Stack Developer. I have finished «Interface development: layout and JavaScript” course run by Yandex
-					and MIPT and now participating course from RS-School.</p>
+					and MIPT and now participating course from RS-School.</div>
 			</article>
 			<article class="experience"><h3>Work experience</h3>
 				<div class="experience__container_flex">											
@@ -299,46 +370,19 @@
 					</li>
 				</ul>
 			</article>
-			<article class="code-examples"><h3>Code examples</h3></article>
-		</main>
-
-		<aside class="left-side">
-			<img class="photo" src="CVphoto_mirror.jpg" alt="photo">
-		<div class="contact"><h3>Contact</h3>
-			<ul> 
-				<li class="contact__phone">Phone: <a href="tel:+79215816965">+7(921)581-69-65</a></li>
-				<li class="contact__email">Email: <a href="mailto:al_seryapin@mail.ru">al_seryapin@mail.ru</a> </li>
-				<li class="contact__address">City: Saint-Petersburg</li>
-			</ul>
-		</div>
-		<div  class="education"><h3>Education</h3>
-			<ul>
-				<li class="education__item">2004-2009 </li>
-				<li class="education__item"><span class="education__item_bold">Ryazan State Radio Engineering
-					University, Russia</span></li>
-				<li class="education__item"><span class="education__item_bold">Specialization:</span> Design electrical
-					equipment and power supply system of
-					electrical equipment.</li>
-				<li class="education__item"><span class="education__item_bold">Graduation paper:</span>
-					Microcontroller-based motor controller for wire feed unit
-				</li>
-				<li class="education__item">12.2020 - 06.2021 </li>
-				<li class="education__item">Course <span class="education__item_bold">“Interface development: layout and
-					JavaScript”</span> run by Moscow Institute of Physics and Technology</li>
-				<li class="education__item">07.2021 - present </li>
-				<li class="education__item">Course <span class="education__item_bold">“JavaScript Front-end”</span> run
-					by Rolling Scopes School</li>
-			</ul>
-		</div>
-		<div class="english-skills"><h3>English skills</h3>
-			<ul>
-				<li class="english-skills__description"> <span class="english-skills__description_bold">Upper-Intermediate (B2)</span></li>
-				<li class="english-skills__description">Experience of conducting technical and commercial negotiations, 
-					provide presentations, oral translation for customers during tripartite meeting.</li>
-			</ul>
-		</div>
-	</aside>
+			
+		</main>		
 	</div>
+	<footer class="footer">	
+		<a href="https://rs.school/js/" class="footer__logo">
+			<img class="footer__logo" src="https://rs.school/images/rs_school_js.svg" alt="RS School">
+		</a>
+		
+		<div class="footer__author">2021 &copy; Aleksandr-True
+			<div class="footer__github-link"><a href="https://github.com/Aleksander-true">github.com/Aleksander-true</a></div>
+		</div>
+		</footer> 
+
 </body>
 
 
