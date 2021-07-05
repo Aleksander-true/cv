@@ -1,0 +1,209 @@
+body {
+  background-color: rgb(240, 240, 240);
+}
+
+.container,
+.footer {
+  position: relative;
+
+  display: flex;
+  box-sizing: border-box;
+  width: 1012px;
+  margin-left: auto;
+  margin-right: auto;
+
+  font-size: 0;
+  font-family: "MyriadProRegular", "Arial", sans-serif;
+
+  background-color: grey;
+}
+
+.left-side {
+  position: relative;
+
+  box-sizing: border-box;
+  display: inline-block;
+  width: 40%;
+
+  font-size: 20px;
+
+  background-color: #ccc;
+}
+
+.photo {
+  display: block;
+  width: 100%;
+}
+
+.contact,
+.education,
+.profile,
+.experience,
+.english-skills,
+.skills,
+.education__trainings,
+.code-examples {
+  margin-top: 40px;
+  margin-left: 40px;
+
+  font-size: 26px;
+  line-height: 23px;
+}
+
+ul {
+  padding: 0;
+}
+
+.contact__phone,
+.contact__email,
+.contact__address,
+.education__item,
+.profile__article,
+.experience__work-place,
+.experience__work-description,
+.english-skills__description,
+.skills__item,
+.code-example__link,
+.education__trainings {
+  display: block;
+  margin: 20px;
+
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.education__trainings {
+  margin-left: 0;
+  font-weight: bold;
+}
+
+.profile__article,
+.code-example__link {
+  margin-left: 0;
+}
+.experience__work-place,
+.experience__work-description {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.experience__position_bold,
+.experience__date {
+  margin-bottom: 10px;
+}
+
+.education__item_bold,
+.english-skills__description_bold,
+.experience__position_bold {
+  font-weight: bold;
+}
+
+.right-side {
+  box-sizing: border-box;
+  width: 60%;
+  display: inline-block;
+  background-color: #fff;
+
+  font-size: 16px;
+
+  padding-right: 60px;
+}
+
+.name {
+  padding-left: 0px;
+  margin-top: 60px;
+  margin-left: 60px;
+  margin-bottom: 100px;
+}
+
+.name__name,
+h1 {
+  font-size: 60px;
+  line-height: 80px;
+  margin-bottom: 20px;
+}
+
+.name__position,
+h2 {
+  font-size: 30px;
+}
+
+h3 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 0;
+}
+
+.experience__container_flex,
+.skills__container_flex {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 0;
+}
+
+.experience__work-place {
+  width: 40%;
+}
+
+.experience__work-description {
+  width: 60%;
+}
+
+.skills__item,
+.skills__mark {
+  width: 20%;
+  list-style-type: none;
+  margin: 20px 0 0 0;
+  align-self: center;
+}
+.skills__mark {
+  margin-right: 40px;
+}
+
+.skills__mark_curcle {
+  display: inline-block;
+  width: 11px;
+  height: 11px;
+
+  border-radius: 50%;
+  background-color: orange;
+  border: 1px solid orange;
+}
+
+.skills__mark_empty {
+  background-color: rgb(218, 218, 218);
+}
+
+.footer__logo {
+  float: inline-start;
+  width: 200px;
+  margin: 20px;
+}
+
+.footer {
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer__github-link,
+.footer__author {
+  font-size: 20px;
+  /*	color: white;*/
+  margin: 10px;
+}
+.footer__author {
+  font-size: 24px;
+  text-align: center;
+}
+
+@font-face {
+  font-family: "MyriadProRegular";
+  src: url("../fonts/MyriadProRegular/MyriadProRegular.eot");
+  src: url("../fonts/MyriadProRegular/MyriadProRegular.eot?#iefix")
+      format("embedded-opentype"),
+    url("../fonts/MyriadProRegular/MyriadProRegular.woff") format("woff"),
+    url("../fonts/MyriadProRegular/MyriadProRegular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 400;
+}
