@@ -1,18 +1,21 @@
 body {
+  margin: 0;
   font-family: "MyriadProRegular", "Arial", sans-serif;
   font-size: 16px;
   line-height: 24px;
   background-color: rgb(250, 250, 250);
 }
 
-.container,
-.footer {
+.container {
   display: flex;
   box-sizing: border-box;
-  width: 1000px;
-  margin-left: auto;
-  margin-right: auto;
+  max-width: 1020px;
+  margin: 0 auto;
   box-shadow: 10px 10px 10px rgba(122, 122, 122, 0.5);
+}
+
+.title__photo {
+  display: none;
 }
 
 .left-side {
@@ -25,9 +28,7 @@ body {
   width: 100%;
 }
 
-.contact,
-.education,
-.english-skills {
+.section {
   padding-top: 55px;
   padding-bottom: 60px;
 }
@@ -36,21 +37,17 @@ body {
   background-color: #343945;
 }
 
-.contact_yellow-grey,
-.education_yellow-grey,
-.english-skills_yellow-grey {
+.section_yellow-grey {
   background-color: #424753;
 }
 
-.contact__header-text,
-.education__header-text,
-.english-skills__header-text {
+.section__header-text {
   position: relative;
   left: 50px;
 }
-.contact_yellow-grey::before,
-.education_yellow-grey::before,
-.english-skills_yellow-grey::before {
+
+.section_yellow-grey::before,
+.section_yellow-pale-grey::before {
   display: block;
   float: left;
   content: "";
@@ -59,24 +56,22 @@ body {
   background-color: #f2c100;
 }
 
+.section_yellow-pale-grey::before {
+  width: 15px;
+}
+
 ul {
   padding: 0;
 }
 
-.contact__phone,
-.contact__email,
-.contact__address,
-.education__item,
-.english-skills__description {
+.section__text {
   display: block;
   margin-left: 80px;
   margin-right: 40px;
   margin-top: 10px;
 }
 
-.contact__phone,
-.contact__email,
-.contact__address {
+.section__contact {
   font-size: 20px;
 }
 
@@ -106,37 +101,34 @@ ul {
   background-color: #fff;
 }
 
-.name {
+.title {
+  position: relative;
   padding-left: 0px;
-  margin-top: 60px;
   margin-left: 60px;
-  margin-bottom: 60px;
 }
 
-.name__name,
+.title__name,
 h1 {
   margin-bottom: 20px;
-
   font-size: 65px;
   line-height: 70px;
   letter-spacing: 0.05em;
   font-weight: normal;
 }
 
-.name__position,
+.title__position,
 h2 {
   font-size: 30px;
-  line-height: 40px;c
+  line-height: 40px;
   letter-spacing: 0.05em;
 }
 
 h3 {
   margin: 0;
-
   font-size: 26px;
   line-height: 38px;
   font-weight: normal;
-  letter-spacing: 0.05em; 
+  letter-spacing: 0.05em;
 }
 
 h4 {
@@ -146,74 +138,51 @@ h4 {
   font-weight: bold;
 }
 
-.profile,
-.experience,
-.skills,
-.education__trainings,
-.code-examples {
+.right-side .section {
   padding-top: 40px;
+  padding-bottom: 10px;
 }
 
-.profile__article,
-.skills__item,
-.code-example__link,
-.education__trainings {
+.right-side .section__text {
   display: block;
   margin-left: 60px;
   margin-right: 40px;
   margin-top: 10px;
 }
 
-.profile_yellow-pale-grey,
-.experience_yellow-pale-grey {
+.section_yellow-pale-grey {
   background-color: #ebebeb;
 }
 
-.profile__header-text,
-.experience__header-text {
-  position: relative;
-  margin-left: 60px;
-}
-
-.profile_yellow-pale-grey::before,
-.experience_yellow-pale-grey::before {
-  display: block;
-  float: left;
-  content: "";
-  width: 15px;
-  height: 38px;
-  background-color: #f2c100;
-}
-
-.experience__container_flex,
-.skills__container_flex {
+.container_flex {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-}
-.experience__container_flex,
-.skills__container_flex {
   padding-left: 45px;
   padding-right: 40px;
+  justify-content: space-between;
+  column-gap: 5px;
+  row-gap: 15px;
 }
 
 .experience__work-place {
-  width: 40%;
+  width: 35%;
 }
 
 .experience__work-description {
   width: 60%;
 }
 
-.skills__item,
-.skills__mark {
+.skills__item {
   width: 20%;
   list-style-type: none;
-  margin: 20px 0 0 0;
   align-self: center;
 }
 .skills__mark {
-  margin-right: 40px;
+  flex-grow: 2;
+  list-style-type: none;
+  margin: 0 5% 0 0;
+  width: 20%;
 }
 
 .skills__mark_curcle {
@@ -239,17 +208,186 @@ h4 {
 .footer {
   align-items: center;
   justify-content: space-between;
-  background-color: rgb(200, 200, 200);
+  background-color: #ebebeb;
+  font-size: 20px;
 }
 
-.footer__github-link,
-.footer__author {
-  font-size: 20px;
-  margin: 10px;
+hr {
+  border: none;
 }
-.footer__author {
-  font-size: 24px;
+
+.footer__text {
   text-align: center;
+  margin: 5px 10px;
+}
+
+@media (max-width: 1000px) {
+  html {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  body {
+    font-size: 14px;
+    line-height: 20px;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  .container {
+    width: 100%;
+    box-shadow: none;
+  }
+
+  .title__photo {
+    display: none;
+  }
+
+  .section {
+    padding-top: 25px;
+    padding-bottom: 30px;
+  }
+
+  .right-side .section__text {
+    margin-left: 30px;
+    margin-right: 30px;
+  }
+
+  .section__text {
+    text-align: justify;
+    margin-left: 30px;
+    margin-right: 20px;
+  }
+
+  .section__contact {
+    font-size: 18px;
+  }
+
+  .section__header-text {
+    left: 30px;
+  }
+
+  .section_yellow-grey::before,
+  .section_yellow-pale-grey::before {
+    height: 30px;
+  }
+
+  .title__name,
+  h1 {
+    font-size: 48px;
+    line-height: 55px;
+  }
+
+  .title__position,
+  h2 {
+    font-size: 22px;
+    line-height: 36px;
+  }
+
+  h3 {
+    font-size: 22px;
+    line-height: 30px;
+  }
+
+  .container_flex {
+    padding-left: 15px;
+    padding-right: 20px;
+  }
+
+  .experience__work-place {
+    width: 35%;
+  }
+
+  .experience__work-description {
+    width: 60%;
+  }
+
+  .skills__mark_curcle {
+    width: 8px;
+    height: 8px;
+  }
+
+  .footer {
+    font-size: 14px;
+  }
+
+  .footer__logo {
+    width: 140px;
+    margin: 10px;
+  }
+}
+
+@media (max-width: 640px) {
+  .left-side .photo {
+    display: none;
+  }
+
+  .container {
+    width: 100%;
+    flex-direction: column;
+    box-shadow: none;
+  }
+
+  .experience .container_flex {
+    padding-left: 10px;
+    padding-right: 10px;
+    flex-direction: column;
+  }
+
+  .experience__work-place {
+    width: 100%;
+  }
+
+  .experience__work-description {
+    width: 100%;
+    margin-top: 0;
+  }
+
+  .experience__position,
+  .experience__date {
+    margin-bottom: 0;
+  }
+
+  .skills__item {
+    margin-right: 5px;
+  }
+
+  .left-side {
+    width: 100%;
+    order: 2;
+  }
+
+  .right-side {
+    width: 100%;
+    order: 1;
+  }
+
+  .title__photo {
+    display: block;
+    width: 80%;
+    height: auto;
+    margin: 0 auto;
+  }
+
+  .title {
+    position: relative;
+    padding-left: 0;
+    margin: 0 auto;
+  }
+
+  .title__name,
+  h1 {
+    font-size: 36px;
+    line-height: 40px;
+    text-align: center;
+  }
+
+  .title__position,
+  h2 {
+    text-align: center;
+  }
 }
 
 @font-face {
