@@ -40,7 +40,7 @@ aside.container {
 .navigation__link {
   list-style-type: none;
   text-decoration: none;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: bold;
   /*text-transform:uppercase;*/
 }
@@ -247,7 +247,8 @@ h4 {
 }
 
 .projects,
-.code-examples {
+.code-examples,
+.video {
   width: 100%;
   background-color: #fff;
 }
@@ -257,6 +258,12 @@ h4 {
   justify-content: space-around;
   align-items: center;
   padding: 10px 0;
+}
+
+.video-container {
+  width: 600px;
+  height: 450px;
+  margin: 40px auto;
 }
 
 .footer__logo {
@@ -409,6 +416,12 @@ hr {
     width: 250px;
   }
 
+  .video-container {
+    width: 500px;
+    height: 380px;
+    margin: 20px auto;
+  }
+
   .img__description {
     margin: 10px 0 0 0;
   }
@@ -493,7 +506,7 @@ hr {
 
   .navigation {
     position: absolute;
-    top: -220px;
+    top: -260px;
     width: 250px;
     background-color: #000000b7;
     transition: top 0.25s linear;
@@ -577,6 +590,12 @@ hr {
 
   .projects__img {
     width: 80%;
+  }
+
+  .video-container {
+    width: 300px;
+    height: 240px;
+    margin: 20px auto;
   }
 
   .img__description {
