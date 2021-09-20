@@ -5,16 +5,42 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
 	<link rel="stylesheet" href="CV.css">
-	<title>Document</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+	
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.9/styles/default.min.css">
+	<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.9/highlight.min.js"></script>
+	<script>hljs.initHighlightingOnLoad();</script>
 
+	<script src="CV.js"> </script>
+	<title>CV</title>
 </head>
 
 <body>
-	<div class="container">
-		<aside class="left-side">
-			<img class="photo" src="CVphoto_mirror.jpg" alt="photo">
-				<div class="section contact"> 
+	<header class="header container">
+		
+		<div class="burger-menu">
+			<span class="burger-menu_drawing"></span>
+		</div>
+		<input class="burger-menu_input" type="checkbox">
+		<nav class="navigation "> 
+			<ul class="container_flex">
+				<li class="navigation__link"><a href="#experience">Experience</a></li>
+				<li class="navigation__link"><a href="#skills">Skills</a></li>
+				<li class="navigation__link"><a href="#projects">Projects</a></li>
+				<li class="navigation__link"><a href="#code">Code Examples</a></li>
+				<li class="navigation__link"><a href="#contact">Contacts</a></li>
+				<li class="navigation__link"><a href="#education">Education</a></li>
+			</ul>
+		</nav>
+	</header>
+	<main class="container">
+		<div class="left-side">
+			<img class="photo" src="img/CVphoto_mirror.jpg" alt="photo">
+				<div class="section contact" id="contact"> 
 					<header  class="section_yellow-grey"><h3 class="section__header-text">Contact</h3></header> 
 					<ul> 
 						<li class="section__text">Phone</li>
@@ -25,7 +51,7 @@
 						<li class="section__text section_link">Saint-Petersburg, Russia</li>
 					</ul>
 				</div>
-				<section class="section education">
+				<section class="section education" id="education">
 					<header  class="section_yellow-grey"><h3 class="section__header-text">Education</h3></header>
 					<ul>
 						<li class="section__text">2004-2009 </li>
@@ -51,30 +77,30 @@
 						<li class="section__text">Managing of a team</li>
 					</ul>
 				</section>
-				<div class="section english-skills">
+				<section class="section english-skills" id="english">
 					<header  class="section_yellow-grey"><h3 class="section__header-text">English skills</h3></header>
 					<ul>
 						<li class="section__text"> Upper-Intermediate (B2)</li>
 						<li class="section__text">Experience of conducting technical and commercial negotiations, 
 							provide presentations, oral translation for customers during tripartite meeting.</li>
 					</ul>
-				</div>
-		</aside>
-		<main class="right-side">
-			<section class="section title">
+				</section>
+			</div>
+		<div class="right-side">
+			<section class="section title" id="title">
 				
 				<div class="title__name"><h1>Aleksandr Seryapin</h1></div>
 				<div class="title__position"><h2>JavaScript Front-End</h2></div>
-				<img class="title__photo" src="CVphoto_small.jpg" alt="photo">
+				<img class="title__photo" src="img/CVphoto_small.jpg" alt="photo">
 			</section>
-			<section class="section profile">
+			<section class="section profile" id="profile">
 				<header  class="section_yellow-pale-grey"><h3 class="section__header-text">Profile</h3></header>
 				<div class="section__text">Last three years I have supported several web sites: product section of corporative site, power supplies sites and site of language courses.  Due to doing this well I learned HTML, CSS and JavaScript to solve practical tasks.  
 					Now I am working at changing my specialization to JavaScript Full
 					Stack Developer. I have finished «Interface development: layout and JavaScript” course run by Yandex
 					and MIPT and now participating course from RS-School.</div>
 			</section>
-			<section class="section experience">
+			<section class="section experience" id="experience">
 				<header  class="section_yellow-pale-grey"><h3 class="section__header-text">Work experience</h3></header>
 				<div class="container_flex">											
 					<div class="experience__work-place">
@@ -88,7 +114,7 @@
 							technical support of customers and integration troubleshooting;</div> 
 					</div>	
 														
-					<div class="experience__work-place">
+					<div class="experience__work-place" id="work">
 						<div class="experience__date">06.2015 – 08.2017</div> 
 						<div class="experience__company-name"><a href="http://pec.ru" class="experience__link">"PEC" LLC</a></div>
 					</div>											
@@ -131,86 +157,222 @@
 					</div>	
 				</div>
 			</section>
-			<section class="section skills">
+			<section class="section skills" id="skills">
 				<header  class="section_yellow-pale-grey"><h3 class="section__header-text">Skills</h3></header>
 				
 				<ul class="container_flex">
 					<li class="skills__item">JavaScript </li>
-					<div class="skills__item skills__mark">
+					<li class="skills__item skills__mark">
 						<span class="skills__mark_curcle"></span>
 						<span class="skills__mark_curcle"></span>
 						<span class="skills__mark_curcle c"></span>
 						<span class="skills__mark_curcle skills__mark_empty"></span>
 						<span class="skills__mark_curcle skills__mark_empty"></span>
-					</div>
+					</li>
 					
 				<li class="skills__item">Node.js </li>
-					<div class="skills__item skills__mark">
+					<li class="skills__item skills__mark">
 						<span class="skills__mark_curcle"></span>
 						<span class="skills__mark_curcle"></span>
 						<span class="skills__mark_curcle c"></span>
 						<span class="skills__mark_curcle skills__mark_empty"></span>
 						<span class="skills__mark_curcle skills__mark_empty"></span>
-					</div>
+					</li>
 			
 				<li class="skills__item">HTML5 </li>
-					<div class="skills__item skills__mark">
+					<li class="skills__item skills__mark">
 						<span class="skills__mark_curcle"></span>
 						<span class="skills__mark_curcle"></span>
 						<span class="skills__mark_curcle c"></span>
 						<span class="skills__mark_curcle skills__mark_empty"></span>
 						<span class="skills__mark_curcle skills__mark_empty"></span>
-					</div>
+					</li>
 			
 				<li class="skills__item">CSS5</li>
-					<div class="skills__item skills__mark">
+					<li class="skills__item skills__mark">
 						<span class="skills__mark_curcle"></span>
 						<span class="skills__mark_curcle"></span>
 						<span class="skills__mark_curcle c"></span>
 						<span class="skills__mark_curcle skills__mark_empty"></span>
 						<span class="skills__mark_curcle skills__mark_empty"></span>
-					</div>
+					</li>
 				
 				<li class="skills__item">GIT</li>
-					<div class="skills__item skills__mark">
+					<li class="skills__item skills__mark">
 						<span class="skills__mark_curcle"></span>
 						<span class="skills__mark_curcle"></span>
 						<span class="skills__mark_curcle c"></span>
 						<span class="skills__mark_curcle skills__mark_empty"></span>
 						<span class="skills__mark_curcle skills__mark_empty"></span>
-					</div>
+					</li>
 				
 				<li class="skills__item">VS Code</li>
-					<div class="skills__item skills__mark">
+					<li class="skills__item skills__mark">
 						<span class="skills__mark_curcle"></span>
 						<span class="skills__mark_curcle"></span>
 						<span class="skills__mark_curcle c"></span>
 						<span class="skills__mark_curcle skills__mark_empty"></span>
 						<span class="skills__mark_curcle skills__mark_empty"></span>
-					</div>
-				
+					</li>
 				</ul>
 			</section>
-			<section class="section code-examples">
-				<header  class="section_yellow-pale-grey"><h3 class="section__header-text">Code examples</h3></header>
-				<div class="section__text">You can find the examples of my projects in my GitHub page <a href="https://github.com/Aleksander-true/Portfolio.git">github.com/Aleksander-true/Portfolio.git</a></div>
-			</section>
-			
-		</main>	
-		
-	</div>
+		</div>	
+	</main>
+	<hr>
+	<aside class="container">
+		<section class="projects" id="projects">
+			<header  class="section_yellow-pale-grey"><h3 class="section__header-text">Project examples</h3></header>
+
+				<a class="projects__link" href="https://rolling-scopes-school.github.io/aleksander-true-JSFEPRESCHOOL/vertical-slider/" target="_blank">
+					<figure class="projects__figure">
+						<img class="projects__img" src="img/Slider.png" alt="slider">
+						<figcaption class="img__description">
+							<h4>Vertical slider</h4>
+							<p>Custom vertical slider with responsible design - fits for desktop, notebooks, tablets and smartphones</p>
+							<p>Runs by mouse and touch swap, scroll, arrow key</p>
+							<p>Technology stack: HTML5, CSS3, JavaScript ES6</p>
+						</figcaption>
+					</figure>
+				</a>
+				
+				<a class="projects__link" href="https://rolling-scopes-school.github.io/aleksander-true-JSFEPRESCHOOL/video-player/" target="_blank">
+					<figure class="projects__figure">
+						<img class="projects__img" src="img/video-player-s.png" alt="custom video player">
+						<figcaption class="img__description">
+							<h4>Video player</h4>
+								<p>Custom video player with playlist, hotkeys and animated video change.</p>
+								<p>All the usual functionality of the video player is implemented - hotkeys, mute, fullscreen and etc.</p>
+								<p>Technology stack: HTML5, CSS3, JavaScript ES6</p>
+						</figcaption>
+					</figure>
+				</a>
+				<a class="projects__link" href="https://rolling-scopes-school.github.io/aleksander-true-JSFEPRESCHOOL/museum/" target="_blank">
+					<figure class="projects__figure">
+						<img class="projects__img" src="img/website.png" alt="louvre landing page">
+						<figcaption class="img__description">
+							<h4>Landing page</h4>
+								<p>Training project, landing page for the louvre museum.</p>
+								<p>Technology stack: HTML5, CSS3, JavaScript ES6</p>
+						</figcaption>
+					</figure>
+				</a>
+		</section>
+
+		<section class=" code-examples" id="code">
+			<header  class="section_yellow-pale-grey"><h3 class="section__header-text">Code examples</h3></header>
+			<pre>
+				<code class="js">
+/** Constructor of Snakes and Ladder game for two players */
+function SnakesLadders() {
+  this.currentPlayer = "1";
+  this.player1 = 0;
+  this.player2 = 0;
+  this.gameOver = false;
+  this.board = [];  
+};
+/** One rolling of the dies  
+* @param {number} die1 - the number of die1 
+* @param {number} die2 - the number of die2 
+* @return {string} "Player n is on square n" 
+*/
+SnakesLadders.prototype.play = function (die1, die2) {
+  let out = "nope";
+  if (this.gameOver) { 
+    return "Game over!" 
+  } else {
+    out = this.forvard(die1 + die2);
+    this.isWinner();
+    this.isDouble(die1, die2);
+  }
+  return out;
+}
+/**
+* Do certain steps forward.
+* @param {number} number - The sum of dies.
+* @return {string} to function play() "Player n is on square n" or "Player n Wins!" 
+* when player on 100th square.
+*/
+SnakesLadders.prototype.forward = function (number) {
+  let out = "";
+  if (this["player" + this.currentPlayer] + number > 100) { 
+    this["player" + this.currentPlayer] = 100 - (this["player" + this.currentPlayer] + number - 100); 
+  } else { 
+    this["player" + this.currentPlayer] += number 
+  };
+  this.ifSnakeOrLadder();
+  if (this.isWinner()) {
+    out = `Player ${this.currentPlayer} Wins!` 
+  } else { 
+    out = `Player ${this.currentPlayer} is on square ${this["player" + this.currentPlayer]}`;
+  }
+  return out;
+};
+
+/**
+* Check if current player reach 100th square
+* change gameOver flag in ninja style :)
+* @return {boolean} true if current player reach 100th square
+*/
+SnakesLadders.prototype.isWinner = function () {
+  if (this["player" + this.currentPlayer] == 100) {
+    this.gameOver = true;
+  }
+  return true;
+};
+
+/**
+* Check if current player step on square with snake head 
+* or ladder bottom
+* if true moving current player by snake or ladder 
+*/
+SnakesLadders.prototype.ifSnakeOrLadder = function () {
+  if (this.board[this["player" + this.currentPlayer]] != 0) { 
+    this.moveTo(this.board[this["player" + this.curentPlayer]]); 
+  }
+};
+
+/** 
+* Moving curent player directly to certain square
+* @param {number} number - the number of square 
+* (tail of snake or top of ladder)
+*/
+SnakesLadders.prototype.moveTo = function (number) {
+  this["player" + this.curentPlayer] = number;
+};
+
+/** 
+* Checking if roll double 
+* changes the player in a ninja style ;)
+* @param {number} die1 - the number of die1 
+* @param {number} die2 - the number of die2 
+*/
+SnakesLadders.prototype.isDouble = function (die1, die2) {
+  if (die1 !== die2) this.nextPlayer();
+};
+
+/** 
+* Change the player 
+*/
+SnakesLadders.prototype.nextPlayer = function () {
+  if (this.curentPlayer == 1) { 
+    this.curentPlayer = 2 
+  } else { 
+    this.curentPlayer = 1 
+  };
+}
+		</code>
+		</pre>
+		</section>
+
+	</aside>	
 	<hr>
 	<footer class="footer container">	
 		<a href="https://rs.school/js/" class="footer__logo">
 			<img class="footer__logo" src="https://rs.school/images/rs_school_js.svg" alt="RS School">
 		</a>
-		
 		<div class="footer__text">2021 &copy; Aleksandr-True
 			<div class="footer__text"><a href="https://github.com/Aleksander-true">github.com/Aleksander-true</a></div>
 		</div>
 		</footer> 
-
 </body>
-
-
 </html>
