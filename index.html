@@ -5,77 +5,105 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
 	<link rel="stylesheet" href="CV.css">
-	<title>Document</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+	
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.9/styles/default.min.css">
+	<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.9/highlight.min.js"></script>
+	<script>hljs.initHighlightingOnLoad();</script>
 
+	<script src="cv.js"> </script>
+	<title>CV</title>
 </head>
 
 <body>
-	<div class="container">
-		<aside class="left-side">
-			<img class="photo" src="CVphoto_mirror.jpg" alt="photo">
-				<div class="contact"> 
-					<header  class="contact_yellow-grey"><h3 class="contact__header-text">Contact</h3></header> 
-					<ul> 
-						<li class="contact__phone">Phone</li>
-						<li class="contact__phone"><a class="contact_link" href="tel:+70000000000">+7 (000) 000-00-00</a></li>
-						<li class="contact__email">Email </li>
-						<li class="contact__email"><a class="contact_link" href="mailto:al_seryapin@mail.ru">al_seryapin@mail.ru</a> </li>
-						<li class="contact__address">Location
-						<li class="contact__address contact_link">Saint-Petersburg, Russia</li>
-					</ul>
-				</div>
-				<div  class="education">
-					<header  class="education_yellow-grey"><h3 class="education__header-text">Education</h3></header>
-					<ul>
-						<li class="education__item">2004-2009 </li>
-						<li class="education__item"><span class="education__item_bold">Ryazan State Radio Engineering
-							University</span></li>
-						<li class="education__item">Electronics Engineer</li>
-						<li class="education__item">Graduation paper:</li>
-						<li class="education__item">Microcontroller wire feed unit.</li>
+	<header class="header container">
 		
-						<li class="education__item"><h3 >Courses</h3> </li>
-						<li class="education__item">12.2020 - 06.2021 </li>
-						<li class="education__item">“Interface development: layout and
-													JavaScript” run by Moscow Institute of Physics and Technology</li>
-						<li class="education__item">07.2021 - present </li>
-						<li class="education__item">“JavaScript Front-end” run
-													by Rolling Scopes School</li>
-						<li class="education__item"><h3 >Trainings</h3></li>
-						<li class="education__item">Negotiations with business partners</li>
-						<li class="education__item">Business writing</li>
-						<li class="education__item">Public speaking courses</li>
-						<li class="education__item">Business presentations</li>
-						<li class="education__item">Project sales</li>
-						<li class="education__item">Managing of a team</li>
+		<div class="burger-menu">
+			<span class="burger-menu_drawing"></span>
+		</div>
+		<input class="burger-menu_input" type="checkbox">
+		<nav class="navigation "> 
+			<ul class="container_flex">
+				<li class="navigation__link"><a href="#experience">Experience</a></li>
+				<li class="navigation__link"><a href="#skills">Skills</a></li>
+				<li class="navigation__link"><a href="#projects">Projects</a></li>
+				<li class="navigation__link"><a href="#code">Code Examples</a></li>
+				<li class="navigation__link"><a href="#contact">Contacts</a></li>
+				<li class="navigation__link"><a href="#education">Education</a></li>
+				<li class="navigation__link"><a href="#video">Video</a></li>
+			</ul>
+		</nav>
+	</header>
+	<main class="container">
+		<div class="left-side">
+			<img class="photo" src="img/CVphoto_mirror.jpg" alt="photo">
+				<div class="section contact" id="contact"> 
+					<header  class="section_yellow-grey"><h3 class="section__header-text">Contact</h3></header> 
+					<ul> 
+						<li class="section__text">Phone</li>
+						<li class="section__text"><a class="contact_link" href="tel:+70000000000">+7 (000) 000-00-00</a></li>
+						<li class="section__text">Email </li>
+						<li class="section__text"><a class="contact_link" href="mailto:al_seryapin@mail.ru">al_seryapin@mail.ru</a> </li>
+						<li class="section__text">Location
+						<li class="section__text section_link">Saint-Petersburg, Russia</li>
 					</ul>
 				</div>
-				<div class="english-skills">
-					<header  class="english-skills_yellow-grey"><h3 class="english-skills__header-text">English skills</h3></header>
+				<section class="section education" id="education">
+					<header  class="section_yellow-grey"><h3 class="section__header-text">Education</h3></header>
 					<ul>
-						<li class="english-skills__description"> Upper-Intermediate (B2)</li>
-						<li class="english-skills__description">Experience of conducting technical and commercial negotiations, 
+						<li class="section__text">2004-2009 </li>
+						<li class="section__text"><span class="section__text_bold">Ryazan State Radio Engineering
+							University</span></li>
+						<li class="section__text">Electronics Engineer</li>
+						<li class="section__text">Graduation paper:</li>
+						<li class="section__text">Microcontroller wire feed unit.</li>
+		
+						<li class="section__text"><h4 >Courses</h4> </li>
+						<li class="section__text">12.2020 - 06.2021 </li>
+						<li class="section__text">“Interface development: layout and
+													JavaScript” run by Moscow Institute of Physics and Technology</li>
+						<li class="section__text">07.2021 - present </li>
+						<li class="section__text">“JavaScript Front-end” run
+													by Rolling Scopes School</li>
+						<li class="section__text"><h4 >Trainings</h4></li>
+						<li class="section__text">Negotiations with business partners</li>
+						<li class="section__text">Business writing</li>
+						<li class="section__text">Public speaking courses</li>
+						<li class="section__text">Business presentations</li>
+						<li class="section__text">Project sales</li>
+						<li class="section__text">Managing of a team</li>
+					</ul>
+				</section>
+				<section class="section english-skills" id="english">
+					<header  class="section_yellow-grey"><h3 class="section__header-text">English skills</h3></header>
+					<ul>
+						<li class="section__text"> Upper-Intermediate (B2)</li>
+						<li class="section__text">Experience of conducting technical and commercial negotiations, 
 							provide presentations, oral translation for customers during tripartite meeting.</li>
 					</ul>
-				</div>
+				</section>
+			</div>
+		<div class="right-side">
+			<section class="section title" id="title">
 				
-		</aside>
-		<main class="right-side">
-			<article class="name">
-				<div class="name__name"><h1>Aleksandr Seryapin</h1></div>
-				<div class="name__position"><h2>JavaScript Front-End</h2></div>
-			</article>
-			<article class="profile">
-				<header  class="profile_yellow-pale-grey"><h3 class="profile__header-text">Profile</h3></header>
-				<div class="profile__article">Last three years I have supported several web sites: product section of corporative site, power supplies sites and site of language courses.  Due to doing this well I learned HTML, CSS and JavaScript to solve practical tasks.  
+				<div class="title__name"><h1>Aleksandr Seryapin</h1></div>
+				<div class="title__position"><h2>JavaScript Front-End</h2></div>
+				<img class="title__photo" src="img/CVphoto_small.jpg" alt="photo">
+			</section>
+			<section class="section profile" id="profile">
+				<header  class="section_yellow-pale-grey"><h3 class="section__header-text">Profile</h3></header>
+				<div class="section__text">Last three years I have supported several web sites: product section of corporative site, power supplies sites and site of language courses.  Due to doing this well I learned HTML, CSS and JavaScript to solve practical tasks.  
 					Now I am working at changing my specialization to JavaScript Full
 					Stack Developer. I have finished «Interface development: layout and JavaScript” course run by Yandex
 					and MIPT and now participating course from RS-School.</div>
-			</article>
-			<article class="experience">
-				<header  class="experience_yellow-pale-grey"><h3 class="experience__header-text">Work experience</h3></header>
-				<div class="experience__container_flex">											
+			</section>
+			<section class="section experience" id="experience">
+				<header  class="section_yellow-pale-grey"><h3 class="section__header-text">Work experience</h3></header>
+				<div class="container_flex">											
 					<div class="experience__work-place">
 						<div class="experience__date">08.2017 – present</div> 
 						<div class="experience__company-name"><a href="http://efo.ru/" class="experience__link">"EFO" LLC</a></div>
@@ -87,7 +115,7 @@
 							technical support of customers and integration troubleshooting;</div> 
 					</div>	
 														
-					<div class="experience__work-place">
+					<div class="experience__work-place" id="work">
 						<div class="experience__date">06.2015 – 08.2017</div> 
 						<div class="experience__company-name"><a href="http://pec.ru" class="experience__link">"PEC" LLC</a></div>
 					</div>											
@@ -129,79 +157,237 @@
 							designing of welding equipment including; managing engineers; preparation of technical documentation.</div> 
 					</div>	
 				</div>
-			</article>
-			<article class="skills">
-				<header  class="experience_yellow-pale-grey"><h3 class="experience__header-text">Skills</h3></header>
+			</section>
+			<section class="section skills" id="skills">
+				<header  class="section_yellow-pale-grey"><h3 class="section__header-text">Skills</h3></header>
 				
-				<ul class="skills__container_flex">
-					<li class="skills__item">JavaScript </li> 
-					<li class="skills__mark">
-						<div class="skills__mark_curcle"></div>
-						<div class="skills__mark_curcle"></div>
-						<div class="skills__mark_curcle c"></div>
-						<div class="skills__mark_curcle skills__mark_empty"></div>
-						<div class="skills__mark_curcle skills__mark_empty"></div>
+				<ul class="container_flex">
+					<li class="skills__item">JavaScript </li>
+					<li class="skills__item skills__mark">
+						<span class="skills__mark_curcle"></span>
+						<span class="skills__mark_curcle"></span>
+						<span class="skills__mark_curcle c"></span>
+						<span class="skills__mark_curcle skills__mark_empty"></span>
+						<span class="skills__mark_curcle skills__mark_empty"></span>
 					</li>
-						
-					<li class="skills__item">Node.js </li>
-					<li class="skills__mark">
-						<div class="skills__mark_curcle"></div>
-						<div class="skills__mark_curcle"></div>
-						<div class="skills__mark_curcle skills__mark_empty"></div>
-						<div class="skills__mark_curcle skills__mark_empty"></div>
-						<div class="skills__mark_curcle skills__mark_empty"></div>
+					
+				<li class="skills__item">Node.js </li>
+					<li class="skills__item skills__mark">
+						<span class="skills__mark_curcle"></span>
+						<span class="skills__mark_curcle"></span>
+						<span class="skills__mark_curcle c"></span>
+						<span class="skills__mark_curcle skills__mark_empty"></span>
+						<span class="skills__mark_curcle skills__mark_empty"></span>
 					</li>
-					<li class="skills__item">HTML5 </li>
-					<li class="skills__mark">
-						<div class="skills__mark_curcle"></div>
-						<div class="skills__mark_curcle"></div>
-						<div class="skills__mark_curcle "></div>
-						<div class="skills__mark_curcle "></div>
-						<div class="skills__mark_curcle skills__mark_empty"></div>
+			
+				<li class="skills__item">HTML5 </li>
+					<li class="skills__item skills__mark">
+						<span class="skills__mark_curcle"></span>
+						<span class="skills__mark_curcle"></span>
+						<span class="skills__mark_curcle c"></span>
+						<span class="skills__mark_curcle skills__mark_empty"></span>
+						<span class="skills__mark_curcle skills__mark_empty"></span>
 					</li>
-					<li class="skills__item">CSS3 </li>
-					<li class="skills__mark">
-						<div class="skills__mark_curcle"></div>
-						<div class="skills__mark_curcle"></div>
-						<div class="skills__mark_curcle "></div>
-						<div class="skills__mark_curcle "></div>
-						<div class="skills__mark_curcle skills__mark_empty"></div>
+			
+				<li class="skills__item">CSS5</li>
+					<li class="skills__item skills__mark">
+						<span class="skills__mark_curcle"></span>
+						<span class="skills__mark_curcle"></span>
+						<span class="skills__mark_curcle c"></span>
+						<span class="skills__mark_curcle skills__mark_empty"></span>
+						<span class="skills__mark_curcle skills__mark_empty"></span>
 					</li>
-					<li class="skills__item">Version control/Git </li>
-					<li class="skills__mark">
-						<div class="skills__mark_curcle"></div>
-						<div class="skills__mark_curcle"></div>
-						<div class="skills__mark_curcle "></div>
-						<div class="skills__mark_curcle skills__mark_empty"></div>
-						<div class="skills__mark_curcle skills__mark_empty"></div>
+				
+				<li class="skills__item">GIT</li>
+					<li class="skills__item skills__mark">
+						<span class="skills__mark_curcle"></span>
+						<span class="skills__mark_curcle"></span>
+						<span class="skills__mark_curcle c"></span>
+						<span class="skills__mark_curcle skills__mark_empty"></span>
+						<span class="skills__mark_curcle skills__mark_empty"></span>
 					</li>
-					<li class="skills__item">VS Code </li>
-					<li class="skills__mark">
-						<div class="skills__mark_curcle"></div>
-						<div class="skills__mark_curcle"></div>
-						<div class="skills__mark_curcle "></div>
-						<div class="skills__mark_curcle skills__mark_empty"></div>
-						<div class="skills__mark_curcle skills__mark_empty"></div>
+				
+				<li class="skills__item">VS Code</li>
+					<li class="skills__item skills__mark">
+						<span class="skills__mark_curcle"></span>
+						<span class="skills__mark_curcle"></span>
+						<span class="skills__mark_curcle c"></span>
+						<span class="skills__mark_curcle skills__mark_empty"></span>
+						<span class="skills__mark_curcle skills__mark_empty"></span>
 					</li>
 				</ul>
-			</article>
-			<article class="code-examples">
-				<header  class="experience_yellow-pale-grey"><h3 class="experience__header-text">Code examples</h3></header>
-				<div class="code-example__link">You can find the examples of my projects in my GitHub page <a href="https://github.com/Aleksander-true/Portfolio.git">github.com/Aleksander-true/Portfolio.git</a></div>
-			</article>
-		</main>		
-	</div>
-	<footer class="footer">	
+			</section>
+		</div>	
+	</main>
+	<hr>
+	<aside class="container">
+		<section class="projects" id="projects">
+			<header  class="section_yellow-pale-grey"><h3 class="section__header-text">Project examples</h3></header>
+
+				<a class="projects__link" href="https://rolling-scopes-school.github.io/aleksander-true-JSFEPRESCHOOL/vertical-slider/" target="_blank">
+					<figure class="projects__figure">
+						<img class="projects__img" src="img/Slider.png" alt="slider">
+						<figcaption class="img__description">
+							<h4>Vertical slider</h4>
+							<p>Custom vertical slider with responsible design - fits for desktop, notebooks, tablets and smartphones</p>
+							<p>Runs by mouse and touch swap, scroll, arrow key</p>
+							<p>Technology stack: HTML5, CSS3, JavaScript ES6</p>
+						</figcaption>
+					</figure>
+				</a>
+				
+				<a class="projects__link" href="https://rolling-scopes-school.github.io/aleksander-true-JSFEPRESCHOOL/video-player/" target="_blank">
+					<figure class="projects__figure">
+						<img class="projects__img" src="img/video-player-s.png" alt="custom video player">
+						<figcaption class="img__description">
+							<h4>Video player</h4>
+								<p>Custom video player with playlist, hotkeys and animated video change.</p>
+								<p>All the usual functionality of the video player is implemented - hotkeys, mute, fullscreen and etc.</p>
+								<p>Technology stack: HTML5, CSS3, JavaScript ES6</p>
+						</figcaption>
+					</figure>
+				</a>
+				<a class="projects__link" href="https://rolling-scopes-school.github.io/aleksander-true-JSFEPRESCHOOL/museum/" target="_blank">
+					<figure class="projects__figure">
+						<img class="projects__img" src="img/website.png" alt="louvre landing page">
+						<figcaption class="img__description">
+							<h4>Landing page</h4>
+								<p>Training project, landing page for the louvre museum.</p>
+								<p>Technology stack: HTML5, CSS3, JavaScript ES6</p>
+						</figcaption>
+					</figure>
+				</a>
+		</section>
+
+		<section class=" code-examples" id="code">
+			<header  class="section_yellow-pale-grey"><h3 class="section__header-text">Code examples</h3></header>
+			<pre>
+				<code class="js">
+/** Constructor of Snakes and Ladder game for two players */
+function SnakesLadders() {
+  this.currentPlayer = "1";
+  this.player1 = 0;
+  this.player2 = 0;
+  this.gameOver = false;
+  this.board = [];  
+};
+/** One rolling of the dies  
+* @param {number} die1 - the number of die1 
+* @param {number} die2 - the number of die2 
+* @return {string} "Player n is on square n" 
+*/
+SnakesLadders.prototype.play = function (die1, die2) {
+  let out = "nope";
+  if (this.gameOver) { 
+    return "Game over!" 
+  } else {
+    out = this.forvard(die1 + die2);
+    this.isWinner();
+    this.isDouble(die1, die2);
+  }
+  return out;
+}
+/**
+* Do certain steps forward.
+* @param {number} number - The sum of dies.
+* @return {string} to function play() "Player n is on square n" or "Player n Wins!" 
+* when player on 100th square.
+*/
+SnakesLadders.prototype.forward = function (number) {
+  let out = "";
+  if (this["player" + this.currentPlayer] + number > 100) { 
+    this["player" + this.currentPlayer] = 100 - (this["player" + this.currentPlayer] + number - 100); 
+  } else { 
+    this["player" + this.currentPlayer] += number 
+  };
+  this.ifSnakeOrLadder();
+  if (this.isWinner()) {
+    out = `Player ${this.currentPlayer} Wins!` 
+  } else { 
+    out = `Player ${this.currentPlayer} is on square ${this["player" + this.currentPlayer]}`;
+  }
+  return out;
+};
+
+/**
+* Check if current player reach 100th square
+* change gameOver flag in ninja style :)
+* @return {boolean} true if current player reach 100th square
+*/
+SnakesLadders.prototype.isWinner = function () {
+  if (this["player" + this.currentPlayer] == 100) {
+    this.gameOver = true;
+  }
+  return true;
+};
+
+/**
+* Check if current player step on square with snake head 
+* or ladder bottom
+* if true moving current player by snake or ladder 
+*/
+SnakesLadders.prototype.ifSnakeOrLadder = function () {
+  if (this.board[this["player" + this.currentPlayer]] != 0) { 
+    this.moveTo(this.board[this["player" + this.curentPlayer]]); 
+  }
+};
+
+/** 
+* Moving curent player directly to certain square
+* @param {number} number - the number of square 
+* (tail of snake or top of ladder)
+*/
+SnakesLadders.prototype.moveTo = function (number) {
+  this["player" + this.curentPlayer] = number;
+};
+
+/** 
+* Checking if roll double 
+* changes the player in a ninja style ;)
+* @param {number} die1 - the number of die1 
+* @param {number} die2 - the number of die2 
+*/
+SnakesLadders.prototype.isDouble = function (die1, die2) {
+  if (die1 !== die2) this.nextPlayer();
+};
+
+/** 
+* Change the player 
+*/
+SnakesLadders.prototype.nextPlayer = function () {
+  if (this.curentPlayer == 1) { 
+    this.curentPlayer = 2 
+  } else { 
+    this.curentPlayer = 1 
+  };
+}
+		</code>
+		</pre>
+		</section>
+		<section class="video" id="video">
+			<header  class="section_yellow-pale-grey"><h3 class="section__header-text">Video self-presentation</h3></header>
+			<div class="video-container">
+				<iframe 
+				width="100%" 
+				height="100%" 
+				src="https://www.youtube.com/embed/1jNb59GOAn4" 
+				title="YouTube video player" 
+				frameborder="0" 
+				allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+				allowfullscreen>
+		</iframe>
+			</div>
+			
+		</section>	
+		</aside>	
+	<hr>
+	<footer class="footer container">	
 		<a href="https://rs.school/js/" class="footer__logo">
 			<img class="footer__logo" src="https://rs.school/images/rs_school_js.svg" alt="RS School">
 		</a>
-		
-		<div class="footer__author">2021 &copy; Aleksandr-True
-			<div class="footer__github-link"><a href="https://github.com/Aleksander-true">github.com/Aleksander-true</a></div>
+		<div class="footer__text">2021 &copy; Aleksandr-True
+			<div class="footer__text"><a href="https://github.com/Aleksander-true">github.com/Aleksander-true</a></div>
 		</div>
 		</footer> 
-
 </body>
-
-
 </html>
